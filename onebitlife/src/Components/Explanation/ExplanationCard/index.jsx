@@ -2,7 +2,7 @@ import React from "react";
 import {View, Image, StyleSheet, Text } from "react-native";
 
 
-export default function ExplationCard(){
+export default function ExplanationCard(){
 
     return(
         <View style = {styles.container}>
