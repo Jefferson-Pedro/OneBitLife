@@ -6,10 +6,11 @@ import LifeStatus from "../../Components/Common/LifeStatus/index.jsx";
 
 
 export default function Start(){
+const navigation = useNavigation();
 
 const handleNavAppExplanation = () => {
-    console.log("Funcionou!")
-}
+    navigation.navigate("AppExplanation");
+};
 
 return(
     <View style={styles.container}>
