@@ -6,7 +6,7 @@ export default function ({habit, frequency, habitArea, checkColor}){
         console.log("botão editar criado!");
     }
     function handleCheck(){
-        console.log("Botão de check do $(habitArea");
+        console.log(`Clicando no check do ${habitArea}`);
     }
     return(
         <TouchableOpacity
