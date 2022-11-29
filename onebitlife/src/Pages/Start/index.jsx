@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor: "rgba(21, 21, 21, 0.98)",
     },
-    logo: {
+    logo: { 
         width: 300,
         height: 60,
         marginTop: 60,
