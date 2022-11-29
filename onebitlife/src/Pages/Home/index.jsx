@@ -1,12 +1,18 @@
+import React, {useEffect, useState} from "react";
+
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
-import { View, ScrollView, StyleSheet, Text} from "react-native";
-//import { ScrollView } from "react-native-gesture-handler";
+import { View, Text, StyleSheet, ScrollView} from "react-native";
 import LifeStatus from "../../Components/Common/LifeStatus";
+import StatusBar from "../../Components/Home/StatusBar";
+
 
 export default function Home(){
 
     const navigation = useNavigation();
+    const [mindHabit, setMindHabit] = useState();
+    const [moneyHabit, setMoneyHabit] = useState();
+    const [bodyHabit, setBodyHabit] = useState();
+    const [funHabit, setFunHabit] = useState();
 
     function handleNavExplanation(){
         navigation.navigate("AppExplanation")
@@ -16,8 +22,10 @@ export default function Home(){
         <View style = {styles.container}>
             <ScrollView>
                 <View style= {{ alignItems: "center" }}>
-                    <Text style={styles.dailyChecks}>❤️ 20 dias - 🚀 80 checks</Text>    
-                    <LifeStatus/>
+                    <Text style={styles.dailyChecks}>❤️ 20 dias - 🚀 80 checks</Text>  
+
+                    <LifeStatus />
+                    <StatusBar />
                 </View>    
                 <Text style={styles.explanationText}
                     onPress={() =>{
@@ -51,17 +59,3 @@ const styles = StyleSheet.create({
     },
 });
 
-/* <View style={styles.container}>
-            <ScrollView>
-                <View style= {{ alignItems: "center" }}>
-                    <Text style={styles.dailyChecks}>❤️ 20 dias - 🚀 80 checks</Text>    
-                    <LifeStatus/>
-                </View>    
-                <Text style={styles.explanationText}
-                    onPress={() =>{
-                        handleNavExplanation();
-                    }} >
-                    Ver explicação novamente.
-                </Text>
-            </ScrollView>      
-        </View>*/
