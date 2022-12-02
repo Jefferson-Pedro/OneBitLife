@@ -3,11 +3,13 @@ import { Image, StyleSheet } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import HabitsData from "../../../DataBase/HabitsData";
 
-export default function SelectHabit ({ habit, habitInput }) {
-  const [selected, setSelected] = useState(habit?.habitName ? habit?.habitName : "-");
+export default function SelectHabit({ habit, habitInput }) {
+  const [selected, setSelected] = useState(
+    habit?.habitName ? habit?.habitName : "-"
+  );
   const [data, setData] = useState();
 
-	useEffect(() => {
+  useEffect(() => {
     if (habit?.habitArea === "Mente") {
       setData(HabitsData.dataMind);
     }
@@ -47,7 +49,7 @@ export default function SelectHabit ({ habit, habitInput }) {
       />
     </>
   );
-};
+}
 
 const styles = StyleSheet.create({
   boxStyle: {
