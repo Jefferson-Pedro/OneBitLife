@@ -12,7 +12,7 @@ db.transaction((tx) => {
 
 const createHabit = (obj) => {
     return new Promise((resolve, reject) => {
-      db.transaction((tx) => {
+      db.transaction((tx) => { 
         tx.executeSql(
           "INSERT INTO habits (habitArea, habitName, habitFrequency, habitHasNotification, habitNotificationFrequency, habitNotificationTime, lastCheck, daysWithoutChecks, progressBar, habitIsChecked, habitChecks) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);",
           [
@@ -38,6 +38,22 @@ const createHabit = (obj) => {
     });
   };
   
+  const findByArea = (habitArea) => {
+    return new Promise((resolve, reject) => {
+      db.transaction((tx) => {
+        tx.executeSql(
+          "SELECT * FROM habits WHERE habitArea LIKE ?;",
+          [habitArea],
+          (_, { rows }) => {
+            if (rows.length > 0) resolve(rows._array);
+          },
+          (_, error) => reject(error)
+        );
+      });
+    });
+  };
+  
   export default {
     createHabit,
+    findByArea
   };
