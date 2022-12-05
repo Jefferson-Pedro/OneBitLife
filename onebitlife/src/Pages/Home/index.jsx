@@ -109,7 +109,7 @@ export default function Home({ route }) {
         <View style={{ alignItems: "center" }}>
           {!gameOver ? (
             <Text style={styles.dailyChecks}>
-              ❤️ {robotDaysLife} {robotDaysLife === "01" ? "dia" : "dias"} - ✔️{checks} 
+              ❤️ {robotDaysLife} {robotDaysLife === "01" ? "dia" : "dias"} - ✔️{"  "}{checks} 
               {checks === 1 ? "Check" : "Checks"}
             </Text>
           ) : (

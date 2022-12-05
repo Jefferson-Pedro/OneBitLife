@@ -31,6 +31,8 @@ export default function HabitPage({ route }) {
   const { create, habit } = route.params;
 
   const habitCreated = new Date();
+  //Aqui podemos fazer o teste para ver as animações de acordo com as datas
+  //  const formatDate = `${habitCreated.getFullYear()}-${habitCreated.getMonth()}-27`;
   const formatDate = `${habitCreated.getFullYear()}-${habitCreated.getMonth()}-${habitCreated.getDate()}`;
 
   const [notification, setNotification] = useState(false);
