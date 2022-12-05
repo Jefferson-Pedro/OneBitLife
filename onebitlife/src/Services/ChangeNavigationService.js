@@ -1,6 +1,7 @@
 import db from "../DataBase";
 
 db.transaction((tx) => {
+
   tx.executeSql(
     "CREATE TABLE IF NOT EXISTS change_navigation (id INTEGER PRIMARY KEY AUTOINCREMENT, showHome TEXT, appStartData TEXT);",
     [],
@@ -8,6 +9,9 @@ db.transaction((tx) => {
       console.log(error);
     }
   );
+ /* tx.executeSql("DROP TABLE habits;", [], ()=> {
+    console.log("Tabela 'change_navigation' deletada!");
+  });*/
 });
 
 const setShowHome = (obj) => {

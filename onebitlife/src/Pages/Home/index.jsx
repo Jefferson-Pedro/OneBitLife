@@ -38,6 +38,8 @@ export default function Home({ route }) {
 
   const excludeArea = route.params?.excludeArea;
 
+  console.log({mindHabit}); //Está indefinido;
+
   useEffect(() => {
     HabitsService.findByArea("Mente").then((mind) => {
       setMindHabit(mind[0]);
@@ -69,7 +71,7 @@ export default function Home({ route }) {
 
     ChangeNavigationService.checkShowHome(1)
       .then((showHome) => {
-        const month = `${today.getMonth() + 1}`.padStart(2, "0");
+        const month = `${today.getMonth() + 1 }`.padStart(2, "0");
         const day = `${today.getDate()}`.padStart(2, "0");
         const formDate = `${today.getFullYear()}-${month}-${day}`;
         const checkDays =
@@ -80,8 +82,7 @@ export default function Home({ route }) {
         } else {
           setRobotDaysLife(parseInt(checkDays / (1000 * 3600 * 24)));
         }
-      })
-      .catch((err) => console.log(err));
+      }).catch((err) => console.log(err));
   }, [route.params]);
 
   useEffect(() => {
