@@ -41,13 +41,14 @@
 
 <h6>** Visando facilitar a demostração da aplicação, recomendo utilizar apenas o VSCode e as tecnologias para rodar o projeto **</h6>
 
-No Terminal/Console:
+<h3>No Terminal/Console:</h3>
 <ol>
 	<li>Faça um clone do projeto na sua máquina: <code>git clone https://github.com/Jefferson-Pedro/OneBitLife </code></li>
 	<li>Entre na pasta raiz do projeto</li> 
-	<li>Inicie no terminal do VSCode o servidor Expo: <code>npx expo start</code></li>
+	<li>Inicie o projeto no VSCode: <code>npx expo init onebitlife</code></li>
+	<li>Em seguida, utilize esse comando para iniciar o servidor: <code>npx expo start</code></li>
 	<li>No seu celular, abra o Expo Go e use o QR Code gerado no terminal do VSCode para se conectar ao servidor</li>
- <li>Deixarei uma versão APK para instalação no seu Android</li>
+ 	<li>Deixarei uma versão APK para instalação no seu Android</li>
 </ol>
 
 <h3>O que foi desenvolvido dentro do projeto?</h3>
@@ -56,7 +57,7 @@ No Terminal/Console:
 <li>Integração com bando de dados SQLite</li>
 <li>FrontEnd com Angular</li>
 <li>Uso de Bibliotecas do NPM e Expo</li>
- <li>Criação do APK para instalação no Aparelho Android</li>
+<li>Criação do APK para instalação no Aparelho Android</li>
 </ul>
 
 <h3>Autor</h3>
